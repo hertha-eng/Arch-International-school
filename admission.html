@@ -296,7 +296,8 @@
           </div>
           <div class="form-group">
             <label>Child's Date of Birth *</label>
-            <input type="date" required>
+            <input type="text" placeholder="DD/MM/YYYY" inputmode="numeric" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$" title="Please enter the date as DD/MM/YYYY" required>
+            <small class="field-hint">Enter as day/month/year, for example 08/11/2022.</small>
           </div>
         </div>
 
@@ -319,7 +320,8 @@
         <div class="form-row">
           <div class="form-group">
             <label>Preferred Start Date *</label>
-            <input type="date" required>
+            <input type="text" placeholder="DD/MM/YYYY" inputmode="numeric" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$" title="Please enter the date as DD/MM/YYYY" required>
+            <small class="field-hint">Enter as day/month/year, for example 15/09/2026.</small>
           </div>
           <div class="form-group">
             <label>How did you hear about us? *</label>

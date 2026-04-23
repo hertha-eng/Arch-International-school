@@ -1,0 +1,571 @@
+/* ============================================
+   SHARED STYLES - Header, Footer, Common Elements
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+:root {
+  --orange: #f9ba60;
+  --pink: #e9768f;
+  --black: #1d1c1c;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #f9f9f9;
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+  --dark-shadow: 0 1rem 2rem rgba(0, 0, 0, .15);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+}
+
+section {
+  padding: 3rem 7%;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+}
+
+section:not(.page-header) {
+  max-width: 1200px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  border: .2rem solid var(--orange);
+  color: var(--orange);
+  background: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all .3s ease;
+}
+
+.btn:hover {
+  background: var(--orange);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+  border-color: var(--orange);
+}
+
+.btn-primary:hover {
+  background: var(--black);
+  border-color: var(--black);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.btn-secondary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ============================================
+   HEADER & NAVBAR
+   ============================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 7%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  height: auto;
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: all .3s ease;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.header .logo:hover {
+  color: var(--orange);
+  transform: translateX(3px);
+}
+
+.header .logo-image {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  transition: all .3s ease;
+}
+
+.header .logo:hover .logo-image {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.school-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 1px;
+}
+
+.school-title {
+  font-size: 0.85rem;
+  color: var(--light-color);
+  letter-spacing: 0.5px;
+}
+
+.navbar {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  margin: 0 auto;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar a {
+  font-size: 1.4rem;
+  color: var(--black);
+  transition: all .3s ease;
+  position: relative;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.3rem;
+  white-space: nowrap;
+}
+
+.navbar a:hover {
+  color: var(--orange);
+  background: rgba(249, 186, 96, 0.1);
+}
+
+.navbar a.active {
+  color: var(--orange);
+  background: linear-gradient(135deg, rgba(249, 186, 96, 0.15), rgba(233, 118, 143, 0.15));
+  font-weight: 600;
+  box-shadow: inset 0 2px 5px rgba(249, 186, 96, 0.1);
+}
+
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-icons a {
+  font-size: 1.8rem;
+  color: var(--black);
+  transition: all .3s ease;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icons a:hover {
+  color: var(--white);
+  background: var(--orange);
+  transform: scale(1.1);
+}
+
+#menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.login-form {
+  position: fixed;
+  top: 0;
+  right: -120%;
+  width: 35rem;
+  background: var(--white);
+  padding: 2rem;
+  text-align: center;
+  border-radius: .5rem;
+  box-shadow: var(--dark-shadow);
+  z-index: 10000;
+  transition: right .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.login-form.active {
+  right: 0;
+}
+
+.login-form h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.login-form .box {
+  width: 100%;
+  margin: 1rem 0;
+  background: var(--light-bg);
+  border-radius: .5rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: var(--black);
+}
+
+.login-form p {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  margin: 1rem 0;
+}
+
+.login-form p a {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+
+.page-header {
+  margin-top: 100px;
+  padding: 4rem 7%;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+  color: var(--white);
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 3rem 7%;
+  margin-top: 5rem;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.box h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--orange);
+}
+
+.box a {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--light-color);
+  margin-bottom: 1rem;
+  transition: all .3s ease;
+}
+
+.box a:hover {
+  color: var(--orange);
+  transform: translateX(5px);
+}
+
+.box a i {
+  color: var(--orange);
+  font-size: 1.5rem;
+}
+
+.credit {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  padding-top: 2rem;
+  font-size: 1.3rem;
+  color: var(--light-color);
+}
+
+.credit span {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .navbar {
+    gap: 0.5rem;
+  }
+
+  .navbar a {
+    padding: 0.7rem 0.9rem;
+    font-size: 1.3rem;
+  }
+
+  .header {
+    padding: 0.8rem 5%;
+  }
+
+  section {
+    padding: 2.5rem 5%;
+  }
+
+  .page-header {
+    padding: 3rem 5% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 2rem 5%;
+  }
+
+  .header {
+    padding: 1rem 5%;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .header .logo-image {
+    height: 50px;
+    width: 50px;
+  }
+
+  .school-name {
+    font-size: 1.4rem;
+  }
+
+  .school-title {
+    font-size: 0.75rem;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 80px;
+    right: -120%;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 5%;
+    box-shadow: var(--box-shadow);
+    transition: right .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 999;
+    display: flex;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    padding: 1rem;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: left;
+    border-radius: 0.5rem;
+  }
+
+  .navbar a.active::after {
+    display: none;
+  }
+
+  .header-icons {
+    gap: 1rem;
+    order: 2;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  #menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-header {
+    margin-top: 80px;
+    padding: 2rem 5%;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .page-header p {
+    font-size: 1.2rem;
+  }
+
+  .login-form {
+    width: 100%;
+    right: -100%;
+    border-radius: 0;
+  }
+
+  .btn {
+    padding: 0.7rem 2rem;
+    font-size: 1.3rem;
+  }
+
+  .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  section {
+    padding: 1.5rem 5%;
+  }
+
+  .header {
+    padding: 0.8rem 4%;
+  }
+
+  .header .logo {
+    gap: 0.5rem;
+  }
+
+  .header .logo-image {
+    height: 45px;
+    width: 45px;
+  }
+
+  .school-name {
+    font-size: 1.2rem;
+  }
+
+  .school-title {
+    font-size: 0.7rem;
+  }
+
+  .header-icons {
+    gap: 0.8rem;
+  }
+
+  .header-icons a {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    top: 70px;
+    padding: 1rem 4%;
+  }
+
+  .page-header {
+    margin-top: 70px;
+    padding: 1.5rem 4%;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .credit {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}

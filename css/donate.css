@@ -1,0 +1,387 @@
+/* ============================================
+   DONATE PAGE STYLES
+   ============================================ */
+
+.donation-intro {
+  padding: 3rem 7%;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--light-bg);
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+}
+
+.donation-intro h2 {
+  font-size: 2.8rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.donation-intro h2 span {
+  color: var(--orange);
+}
+
+.donation-intro p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 1.8;
+}
+
+/* ============================================
+   DONATION IMPACT
+   ============================================ */
+
+.donation-impact {
+  padding: 4rem 7%;
+}
+
+.donation-impact h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.donation-impact h2 span {
+  color: var(--orange);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.impact-card {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+  color: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--dark-shadow);
+}
+
+.impact-card i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.impact-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.impact-card p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* ============================================
+   DONATION METHODS
+   ============================================ */
+
+.donation-methods {
+  padding: 4rem 7%;
+  background: var(--light-bg);
+}
+
+.donation-methods h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.donation-methods h2 span {
+  color: var(--orange);
+}
+
+.methods-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.method-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.method-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange), var(--pink));
+}
+
+.method-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--dark-shadow);
+}
+
+.method-card i {
+  font-size: 3rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+.method-card h3 {
+  font-size: 1.6rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.method-card p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.method-card .btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* ============================================
+   FUND ALLOCATION
+   ============================================ */
+
+.fund-allocation {
+  padding: 4rem 7%;
+}
+
+.fund-allocation h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.fund-allocation h2 span {
+  color: var(--orange);
+}
+
+.allocation-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.allocation-chart {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.allocation-item {
+  margin-bottom: 2rem;
+}
+
+.allocation-item h4 {
+  font-size: 1.3rem;
+  color: var(--black);
+  margin-bottom: 0.8rem;
+  text-align: right;
+}
+
+.allocation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all .3s ease;
+}
+
+.allocation-bar:hover {
+  transform: scaleX(1.05);
+  box-shadow: var(--box-shadow);
+}
+
+.allocation-description p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   DONATION TESTIMONIALS
+   ============================================ */
+
+.donation-testimonials {
+  padding: 4rem 7%;
+  background: var(--light-bg);
+}
+
+.donation-testimonials h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.donation-testimonials h2 span {
+  color: var(--orange);
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  border-left: 5px solid var(--orange);
+  transition: all .3s ease;
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: translateY(-8px);
+}
+
+.testimonial-card p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-card h4 {
+  font-size: 1.2rem;
+  color: var(--orange);
+  text-align: right;
+}
+
+/* ============================================
+   DONATION CTA
+   ============================================ */
+
+.donation-cta {
+  padding: 5rem 7%;
+  text-align: center;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+  border-radius: 1rem;
+  margin: 4rem 7%;
+}
+
+.donation-cta h2 {
+  font-size: 2.8rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.donation-cta p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  color: var(--black);
+  border-color: var(--white);
+  background: var(--white);
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.cta-buttons .btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .donation-intro h2,
+  .donation-impact h2,
+  .donation-methods h2,
+  .fund-allocation h2,
+  .donation-testimonials h2 {
+    font-size: 2.2rem;
+  }
+
+  .allocation-content {
+    grid-template-columns: 1fr;
+  }
+
+  .methods-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .testimonials-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .cta-buttons {
+    gap: 1rem;
+  }
+
+  .cta-buttons .btn {
+    font-size: 1.2rem;
+    padding: 0.7rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-grid,
+  .methods-container,
+  .testimonials-container {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-cta {
+    margin: 2rem 5%;
+    padding: 3rem 5%;
+  }
+
+  .donation-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}

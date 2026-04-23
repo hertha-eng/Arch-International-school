@@ -1,0 +1,365 @@
+/* ============================================
+   HOME PAGE STYLES
+   ============================================ */
+
+.eyebrow {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.6rem;
+}
+
+.section-heading h2 {
+  font-size: 3rem;
+  color: var(--black);
+  margin-bottom: 0;
+  max-width: 15ch;
+}
+
+.section-note {
+  max-width: 44rem;
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.home {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  align-items: center;
+  gap: 3rem;
+  padding-top: 14rem !important;
+  padding-bottom: 5rem !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 8rem 0 auto;
+  height: 42rem;
+  background:
+    radial-gradient(circle at top left, rgba(249, 186, 96, 0.2), transparent 36%),
+    radial-gradient(circle at top right, rgba(233, 118, 143, 0.16), transparent 32%);
+  pointer-events: none;
+}
+
+.home .content,
+.image-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.home .content h1 {
+  font-size: clamp(3.8rem, 6vw, 6rem);
+  color: var(--black);
+  margin-bottom: 1.4rem;
+  line-height: 1.08;
+  max-width: 12ch;
+}
+
+.hero-copy {
+  font-size: 1.55rem;
+  color: var(--light-color);
+  margin-bottom: 2.2rem;
+  line-height: 1.9;
+  max-width: 60rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.4rem;
+}
+
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.highlight-pill {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(29, 28, 28, 0.08);
+  border-radius: 1.6rem;
+  padding: 1.4rem;
+  box-shadow: 0 1rem 2.5rem rgba(29, 28, 28, 0.06);
+}
+
+.highlight-pill strong {
+  display: block;
+  font-size: 1.45rem;
+  color: var(--black);
+  margin-bottom: 0.4rem;
+}
+
+.highlight-pill span {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  line-height: 1.6;
+}
+
+.image-panel {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.image-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fffaf2 100%);
+  padding: 1.2rem;
+  border-radius: 2.4rem;
+  box-shadow: 0 2rem 5rem rgba(29, 28, 28, 0.12);
+}
+
+.main-image img {
+  width: 100%;
+  display: block;
+  border-radius: 1.8rem;
+  min-height: 46rem;
+  object-fit: cover;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 1.4rem 3rem rgba(233, 118, 143, 0.18);
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 2.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.stat-card span {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  display: block;
+}
+
+/* ============================================
+   MOTTO SECTION
+   ============================================ */
+
+.motto-section {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+  color: var(--white);
+  text-align: center;
+  border-radius: 2.4rem;
+  box-shadow: 0 1.8rem 4rem rgba(233, 118, 143, 0.18);
+}
+
+.motto-section .eyebrow {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.motto-section h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--white);
+}
+
+.motto-description {
+  font-size: 1.45rem;
+  opacity: 0.96;
+  max-width: 78rem;
+  margin: 0 auto;
+}
+
+/* ============================================
+   FEATURES SECTION
+   ============================================ */
+
+.features {
+  padding: 4rem 7%;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+.feature-box {
+  background: linear-gradient(180deg, #ffffff 0%, #fcfcfc 100%);
+  padding: 2.2rem;
+  border-radius: 1.8rem;
+  box-shadow: 0 1.2rem 3rem rgba(29, 28, 28, 0.08);
+  border: 1px solid rgba(29, 28, 28, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1.8rem 4rem rgba(29, 28, 28, 0.12);
+}
+
+.feature-box i {
+  width: 5.2rem;
+  height: 5.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.4rem;
+  background: rgba(249, 186, 96, 0.14);
+  font-size: 2rem;
+  color: var(--orange);
+  margin-bottom: 1.2rem;
+}
+
+.feature-box h3 {
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 0.9rem;
+}
+
+.feature-box p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  line-height: 1.8;
+}
+
+/* ============================================
+   JOURNEY SECTION
+   ============================================ */
+
+.journey-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+  gap: 2.4rem;
+  align-items: start;
+  background:
+    linear-gradient(180deg, rgba(249, 249, 249, 0.95), rgba(255, 248, 239, 0.95));
+  border-radius: 2.4rem;
+}
+
+.journey-copy h2 {
+  font-size: 3rem;
+  color: var(--black);
+  margin-bottom: 1.2rem;
+  max-width: 15ch;
+}
+
+.journey-copy p {
+  font-size: 1.45rem;
+  color: var(--light-color);
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+  max-width: 58rem;
+}
+
+.journey-points {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.journey-point {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+  box-shadow: var(--box-shadow);
+}
+
+.journey-point i {
+  font-size: 2rem;
+  color: var(--orange);
+  margin-top: 0.2rem;
+}
+
+.journey-point h3 {
+  font-size: 1.6rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.journey-point p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  line-height: 1.7;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 991px) {
+  .home,
+  .journey-section,
+  .section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding-top: 12rem !important;
+    min-height: auto;
+  }
+
+  .home .content h1,
+  .motto-section h2,
+  .section-heading h2,
+  .journey-copy h2 {
+    max-width: none;
+  }
+
+  .hero-highlights,
+  .hero-stats,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-image img {
+    min-height: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions .btn,
+  .journey-copy .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-heading h2,
+  .journey-copy h2,
+  .motto-section h2 {
+    font-size: 2.4rem;
+  }
+}

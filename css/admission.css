@@ -1,0 +1,681 @@
+/* ============================================
+   ADMISSION PAGE STYLES
+   ============================================ */
+
+.admission-intro {
+  padding: 3rem 7%;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--light-bg);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.admission-intro h2 {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.admission-intro h2 span {
+  color: var(--orange);
+}
+
+.admission-intro p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 1.8;
+}
+
+/* ============================================
+   AGE GROUP CARDS
+   ============================================ */
+
+.admission-age-groups {
+  padding: 4rem 7%;
+}
+
+.admission-age-groups h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.admission-age-groups h2 span {
+  color: var(--orange);
+}
+
+.age-group-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.age-group-card {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+  border-top: 5px solid var(--orange);
+  text-align: center;
+}
+
+.age-group-card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--dark-shadow);
+}
+
+.age-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.age-group-card h3 {
+  font-size: 1.9rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.age-group-card .age-range {
+  font-size: 1.3rem;
+  color: var(--orange);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.program-details {
+  background: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.program-details h4 {
+  font-size: 1.3rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.program-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.program-details li {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.program-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.age-group-card .capacity,
+.age-group-card .ratio {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  margin-bottom: 0.8rem;
+}
+
+/* ============================================
+   ADMISSION PROCESS TIMELINE
+   ============================================ */
+
+.admission-process {
+  padding: 4rem 7%;
+  background: var(--light-bg);
+}
+
+.admission-process h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.admission-process h2 span {
+  color: var(--orange);
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+  position: relative;
+}
+
+.timeline-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--dark-shadow);
+}
+
+.timeline-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.timeline-item p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  line-height: 1.6;
+}
+
+/* ============================================
+   REQUIREMENTS GRID
+   ============================================ */
+
+.admission-requirements {
+  padding: 4rem 7%;
+}
+
+.admission-requirements h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.admission-requirements h2 span {
+  color: var(--orange);
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.requirement-card {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all .3s ease;
+  border-left: 5px solid var(--orange);
+}
+
+.requirement-card:hover {
+  background: var(--white);
+  box-shadow: var(--dark-shadow);
+  transform: translateX(10px);
+}
+
+.requirement-card i {
+  font-size: 2.5rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+.requirement-card h3 {
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.requirement-card p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  line-height: 1.6;
+}
+
+/* ============================================
+   TUITION & FEES
+   ============================================ */
+
+.tuition-fees {
+  padding: 4rem 7%;
+  background: var(--light-bg);
+}
+
+.tuition-fees h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.tuition-fees h2 span {
+  color: var(--orange);
+}
+
+.fees-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.fee-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+  border-top: 5px solid var(--orange);
+}
+
+.fee-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--dark-shadow);
+}
+
+.fee-card h3 {
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.fee-details {
+  border-bottom: 2px solid var(--light-bg);
+  padding-bottom: 1.5rem;
+}
+
+.fee-details p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fee-details strong {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.fee-details span {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.additional-fees {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.additional-fees h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.fees-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fees-info p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.6;
+}
+
+.fees-info i {
+  color: var(--orange);
+  font-size: 1.5rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.fees-info strong {
+  color: var(--black);
+}
+
+/* ============================================
+   ADMISSION FORM
+   ============================================ */
+
+.admission-form-section {
+  padding: 4rem 7%;
+}
+
+.admission-form-section h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.admission-form-section h2 span {
+  color: var(--orange);
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admission-form {
+  background: var(--light-bg);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 1.3rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.9rem;
+  border: 2px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Poppins', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  transition: all .3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 8px rgba(249, 186, 96, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  margin: 0;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.form-info {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  border-left: 5px solid var(--orange);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-info h3 {
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.form-info p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.form-info p i {
+  color: var(--orange);
+  font-size: 1.5rem;
+}
+
+.form-info p a {
+  color: var(--orange);
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.form-info p a:hover {
+  color: var(--black);
+}
+
+.form-info .btn {
+  margin-top: 2rem;
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+
+.admission-testimonials {
+  padding: 4rem 7%;
+  background: var(--light-bg);
+}
+
+.admission-testimonials h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--black);
+}
+
+.admission-testimonials h2 span {
+  color: var(--orange);
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--dark-shadow);
+}
+
+.testimonial-header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-header i {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+.testimonial-card p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial-card h4 {
+  font-size: 1.4rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card .child-grade {
+  font-size: 1.2rem;
+  color: var(--orange);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 992px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .age-group-cards,
+  .process-timeline,
+  .requirements-grid,
+  .fees-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .admission-intro h2,
+  .admission-age-groups h2,
+  .admission-process h2,
+  .admission-requirements h2,
+  .tuition-fees h2,
+  .admission-form-section h2,
+  .admission-testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .age-group-cards,
+  .requirements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .form-info {
+    padding: 1.5rem;
+  }
+
+  .form-info .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admission-intro {
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+
+  .age-group-cards,
+  .requirements-grid,
+  .fees-container,
+  .testimonials-container {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-form {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 1.1rem;
+  }
+}

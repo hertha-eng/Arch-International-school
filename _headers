@@ -1,0 +1,20 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/css/*
+  Cache-Control: public, max-age=604800
+
+/Arch.js
+  Cache-Control: public, max-age=604800
+
+/Arch-images/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/robots.txt
+  Cache-Control: public, max-age=3600
